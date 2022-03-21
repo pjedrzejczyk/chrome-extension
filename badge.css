@@ -1,0 +1,47 @@
+.badge {
+background: radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+background: -moz-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+background: -ms-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+background: -o-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+background: -webkit-radial-gradient( center -9px, circle closest-side, white 0, red 26px );
+background-color: red;
+border: 2px solid white;
+border-radius: 12px; /* must be 1/2 of ( border-width*2 + width ) */
+box-shadow: 1px 1px 1px black;
+color: white;
+font: bold 17px/15px Helvetica, Verdana, Tahoma;
+height: 17px; /* height + padding-top must equal width */
+padding-top: 2px; /* height + padding-top must equal width */
+text-align: center;
+width: 19px;
+}
+
+.badge {
+	position: absolute;
+	left: 54px;
+	top: -8px;
+}
+
+.badgePoints {
+background: radial-gradient( center -9px, circle closest-side, white 0, blue 26px );
+background: -moz-radial-gradient( center -9px, circle closest-side, white 0, blue 26px );
+background: -ms-radial-gradient( center -9px, circle closest-side, white 0, blue 26px );
+background: -o-radial-gradient( center -9px, circle closest-side, white 0, blue 26px );
+background: -webkit-radial-gradient( center -9px, circle closest-side, white 0, blue 26px );
+background-color: blue;
+border: 2px solid white;
+border-radius: 12px; /* must be 1/2 of ( border-width*2 + width ) */
+box-shadow: 1px 1px 1px black;
+color: white;
+font: bold 17px/15px Helvetica, Verdana, Tahoma;
+height: 17px; /* height + padding-top must equal width */
+padding-top: 2px; /* height + padding-top must equal width */
+text-align: center;
+width: 19px;
+}
+
+.badgePoints {
+	position: absolute;
+	left: 54px;
+	top: 18px;
+}

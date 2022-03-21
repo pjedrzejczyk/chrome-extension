@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "ArtPallet",
+  "version": "0.1.2.4",
+  "description": "Addons and Perks to FineArtAmerica.com. This chrome extension is NOT affiliated nor endorsed by FineArtAmerica.",
+  "background": {"scripts": ["background.js"]},
+  "icons": { "16": "icons/paint16.png",
+             "48": "icons/paint48.png",
+            "128": "icons/paint128.png" },
+  "permissions": [
+	"contextMenus",
+	"storage",
+	"activeTab",
+	"http://pixels.com/*",
+	"http://fineartamerica.com/*",
+        "http://fineartinternational.com/*",
+        "http://finearteurope.com/*",
+        "http://fineartengland.com/*",
+        "http://fineartnorthamerica.com/*",
+        "http://fineartdownunder.com/*",
+        "http://fineartgermany.com/*"
+  ],
+  "page_action": {
+    "default_icon": "icons/paint16.png",
+    "default_title": "ArtPallet",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+	{
+	"matches": ["http://pixels.com/contests.html", 
+                    "http://fineartamerica.com/contests.html",
+                    "http://fineartinternational.com/contests.html",
+                    "http://finearteurope.com/contests.html",
+                    "http://fineartengland.com/contests.html",
+                    "http://fineartnorthamerica.com/contests.html",
+                    "http://fineartdownunder.com/contests.html",
+                    "http://fineartgermany.com/contests.html"
+                    ],
+	"js": ["contestrequest.js"],
+        "run_at": "document_end"
+	},
+        {
+        "css": [ "badge.css" ],
+        "matches": [ "http://pixels.com/*", 
+                     "http://fineartamerica.com/*",
+                     "http://fineartinternational.com/*",
+                     "http://finearteurope.com/*",
+                     "http://fineartengland.com/*",
+                     "http://fineartnorthamerica.com/*",
+                     "http://fineartdownunder.com/*",
+                     "http://fineartgermany.com/*"
+                     ]
+        }
+  ]
+}
